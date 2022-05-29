@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>QR Code Generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="vCard.js" ></script>
+    
+</head>
+    <body>
+       
+        <div class="container">
+        <form action="" method="POST" class="form"> 
+            <h1>Menu de codigo QR </h1>
+            <fieldset>
+                <legend><h3>Informacion Personal</h3></legend> 
+                <p><label>Nombre:</label><input type="text" name="nombre" size="40"></p>
+                <p><label>Apellido:</label><input type="text" name="apellido" size="40"></p>
+                <p><label>Empresa:</label><input type="text" name="Empresa" size="40"></p>
+                <p><label>Cargo: </label><input type="text" name="cargo" size="30"></p>
+                <p><label>Celular:</label><input type="text" name="celular"></p>
+                <p><label>Telefono: </label><input type="text" name="telefono" size="20"></p>
+                <p><label>E-mail: </label><input type="text" name="email" size="40"></p>
+                <p><label>E-mail empresarial: </label><input type="email" name="email2" size="40"></p>
+            </fieldset>
+                
+                <p><input type="button" name="submit" value="Generar" style="margin-left: 10px;" class="button"></p>
+               <p><input type="reset" name="limpiar" value="Limpiar" onclick="hideImage()" class="button"></p>     
+        </form>
+            </div>
+        
+        <h3>QR code</h3>
+        <img id="qr" src="http://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=" alt="vcard qr" style="display: none;">
+   
+        <script type="text/javascript">
+           
+            function hideImage() {
+                var img = document.getElementById('qr');
+                img.style.visibility = 'hidden';
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+
